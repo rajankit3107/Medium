@@ -1,22 +1,20 @@
 import z from "zod"
 
-const signupInput = z.object({
+export const signupInput = z.object({
+    name  : z.string().optional(),
     username : z.string().email(),
-    password  : z.string().min(6),
-    name  : z.string().optional()
+    password  : z.string().min(6)
 })
-
 
 //type inference in zod
 export type SignupInput = z.infer<typeof signupInput>
   
-const signinInput = z.object({
+export const signinInput = z.object({
     username : z.string().email(),
     password  : z.string().min(6),
 })
 
 export type SigninInput = z.infer<typeof signinInput>
-
 
 export const createBlogInput = z.object({
     title : z.string(),

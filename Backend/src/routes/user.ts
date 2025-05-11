@@ -4,7 +4,7 @@ import { PrismaClient } from '../generated/prisma/edge'
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { decode, sign, verify } from 'hono/jwt'
 import z from "zod"
-import { signupInput, signinInput } from '@anxit0731/medium-common2'
+import { signupInput, signinInput } from '@anxit/medium-common'
 
 export const userRouter = new Hono<{
     Bindings: {
@@ -66,9 +66,7 @@ userRouter.post('/signup', async (c) => {
      const user = await prisma.user.findFirst({
         where:{
           username : body.username,
-          password  :body.password,
-          name : body.name
-    
+          password  :body.password
         }
       })
       if(!user) {

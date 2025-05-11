@@ -1,0 +1,1 @@
+export const BACKEND_URL = "https://medium.rajankit3107.workers.dev"
