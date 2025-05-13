@@ -111,7 +111,18 @@ export const blogRouter = new Hono<{
         }).$extends(withAccelerate())
     
         try {
-          const blogs = await prisma.blog.findMany()
+          const blogs = await prisma.blog.findMany({
+            select : {
+              content : true,
+              title : true,
+              id : true,
+              author : {
+                select : {
+                  name : true,
+              }
+            }
+          }
+          })
     
         return c.json({
           blogs
@@ -136,6 +147,16 @@ export const blogRouter = new Hono<{
         where: {
           id: Number(id)
         },
+        select : {
+          id : true,
+          title : true,
+          content : true,
+          author : {
+            select : {
+              name : true
+            }
+          }
+        }
       })
       return c.json({
         blog

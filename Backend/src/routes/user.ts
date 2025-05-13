@@ -14,7 +14,7 @@ export const userRouter = new Hono<{
 }>();
 
 userRouter.post('/signup', async (c) => {
-    const body = await c.req.json();
+    const body = await c.req.json(); // body is a json object which stores the data like name, username and password
     const { success } = signupInput.safeParse(body);
     if(!success) {
       c.status(411)
