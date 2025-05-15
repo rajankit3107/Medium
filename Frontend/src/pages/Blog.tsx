@@ -1,6 +1,6 @@
 import { useBlog } from "../hooks";
 import { useParams } from "react-router-dom";
-import { AppBar } from "../components/AppBar"; // Assuming you have an AppBar component
+import { Appbar } from "../components/AppBar"; // Assuming you have an AppBar component
 
 // Define the Blog type (ensure this matches your useBlog hook's return type)
 interface Blog {
@@ -24,7 +24,7 @@ export const Blog = () => {
   if (loading) {
     return (
       <div>
-        <AppBar />
+        <Appbar />
         <div className="flex justify-center items-center h-screen">
            {/* Simple loading text as a fallback */}
            <div className="text-xl text-gray-700">Loading...</div>
@@ -36,7 +36,7 @@ export const Blog = () => {
   if (!blog) {
     return (
       <div>
-        <AppBar />
+        <Appbar />
         <div className="flex justify-center items-center h-screen">
           <h1 className="text-xl font-semibold text-gray-700">Blog not found.</h1>
         </div>
@@ -46,7 +46,7 @@ export const Blog = () => {
 
   return (
     <div>
-      <AppBar />
+      <Appbar />
       <div className="container mx-auto px-4 py-8 max-w-screen-lg"> {/* Centered container */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12"> {/* Responsive grid */}
           {/* Main Blog Content */}

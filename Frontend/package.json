@@ -12,12 +12,17 @@
   "dependencies": {
     "@anxit/medium-common": "^1.0.1",
     "@anxit0731/medium-common2": "^1.0.0",
+    "@radix-ui/themes": "^3.2.1",
     "@tailwindcss/vite": "^4.1.6",
     "@types/axios": "^0.9.36",
     "axios": "^1.9.0",
+    "easymde": "^2.20.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.0"
+    "react-hook-form": "^7.56.3",
+    "react-router-dom": "^7.6.0",
+    "react-simplemde-editor": "^5.2.0",
+    "simplemde": "^1.11.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
