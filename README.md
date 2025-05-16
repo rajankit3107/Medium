@@ -20,13 +20,12 @@ Blogsy is a modern, full-stack blogging platform built with cutting-edge technol
     *   Tailwind CSS (for styling)
     *   `react-router-dom` (for routing)
     *   `react-hook-form` (for form management)
-    *   `react-simplemde-editor` / `easymde` (for the Markdown editor)
     *   Axios or Fetch API (for making API calls)
 *   **Backend:**
     *   Hono (for the serverless/edge backend framework)
     *   TypeScript
-    *   Database (Specify your database, e.g., PostgreSQL, MySQL, Cloudflare D1, etc.)
-    *   Authentication library (Specify if you used one)
+    *   Database (Specify your database - PostgreSQL, Prisma, Prisma Accelerate
+    *   Authentication - zod
 
 ## 🛠️ Installation and Setup
 
